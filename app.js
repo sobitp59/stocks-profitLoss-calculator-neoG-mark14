@@ -27,13 +27,13 @@ function calculateProfitAndLoss() {
    {
       let profit = (currentprice - initialprice) * stocksquantity;
       let profitPercentage = (profit/initialprice) * 100;
-      showOutputDiv.textContent = `🚀 hurrah! you have a profit of ${profit} and profit percentage is ${profitPercentage.toFixed(2)}%`;
+      showOutputDiv.textContent = `🚀 hurrah! you have a profit of ${profit.toFixed(2)} and profit percentage is ${profitPercentage.toFixed(2)}%`;
       showOutputStyling(showOutputDiv, "rgba(0, 228, 95, 0.87)", "rgba(0, 228, 95, 0.192)");
    } else if (currentprice < initialprice) 
    {
       let loss = (initialprice - currentprice) * stocksquantity;
       let lossPercentage = (loss / initialprice) * 100;
-      showOutputDiv.textContent = `👀 whoops! you have a loss of ${loss} and loss percentage is -${lossPercentage.toFixed(2)}%`;
+      showOutputDiv.textContent = `👀 whoops! you have a loss of ${loss.toFixed(2)} and loss percentage is -${lossPercentage.toFixed(2)}%`;
       showOutputStyling(showOutputDiv, "rgb(255, 11, 11)", "rgba(255, 11, 11, 0.205)");
 
    } else 
